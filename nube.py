@@ -15,7 +15,7 @@ def generar_nube_palabras(df, column_name, ruta_salida):
 
     ## INICIO - COMPLETAR CODIGO
     # Concatenar todo el texto de la columna especificada
-    texto = None
+    texto = " ".join(df[column_name].dropna().astype(str))
     ## FIN - COMPLETAR CODIGO
 
     nube = WordCloud(width=800, height=400, background_color='white').generate(texto)
